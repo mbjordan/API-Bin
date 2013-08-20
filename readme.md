@@ -32,7 +32,7 @@ To define a specific content type, one of the optional parameters (below) must b
 
 ## Set a resource
 
-/set (HTTP GET/HTTP POST)
+    /set (HTTP GET/HTTP POST)
 
 Calling `/set` via HTTP GET will return the GUI for browser use.
 
@@ -43,6 +43,6 @@ Calling `/set` via HTTP POST will require two POST fields:
 
 ## Edit a resource
 
-/edit/resource-key
+    /edit/resource-key
 
 This is GUI only at the moment.
