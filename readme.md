@@ -2,7 +2,7 @@
 
 > This is a draft of an idea, using [Readme Driven Development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html) 
 
-API Bin will be a RESTful web service built in a Key->Value model where the key is used to return the value (duh). The goal is to easily test API implementations without actually using the API.
+API Bin will be a RESTful web service built in a Key->Value model where the key is used to return the value (duh). The goal is to easily test API implementations without actually using the API that the implementation was implemented for (phew).
 
 The API will be public, with the option to create user accounts to store bins on. A bin related to a user account will have the option to create either private or public bins.
 
