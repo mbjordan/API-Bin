@@ -66,3 +66,9 @@ The entire application will be open-source to promote community.
 ---
 
 If you (an awesome reader) have any ideas or suggestions, please create an issue, or comment on an existing issue. Thanks for being awesome!
+
+## License
+
+In this conceptual stage, the idea is licensed under http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+Please attribute any use of the idea to [@matthewbjordan](https://twitter.com/matthewbjordan)
