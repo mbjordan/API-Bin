@@ -62,3 +62,7 @@ To define a specific content type, one of the optional parameters (below) must b
 The back-end of API Bin will be built using Node.js, express.js & MongoDB; so it will be fast. The platform will either be Heroku or NodeJitsu, so it will be reliable.
 
 The entire application will be open-source to promote community.
+
+---
+
+If you (an awesome reader) have any ideas or suggestions, please create an issue, or comment on an existing issue. Thanks for being awesome!
