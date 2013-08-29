@@ -1,25 +1,48 @@
 # API Bin
 
-API Bin is a RESTful web service built in a Key->Value model where the key is used to return the value (duh).
+> This is a draft of an idea, using [Readme Driven Development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html) 
+
+API Bin will be a RESTful web service built in a Key->Value model where the key is used to return the value (duh). The goal is to easily test API implementations without actually using the API.
+
+The API will be public, with the option to create user accounts to store bins on. A bin related to a user account will have the option to create either private or public bins.
+
+Any type of data can be set, and public bins will automatically delete after 12 hours to keep key names clear.
+
+## Set a resource
+
+    [/user-name]/set (HTTP GET/HTTP POST)
+
+Calling `[/user-name]/set` via HTTP GET will return the GUI for browser use.
+
+Calling `[/user-name]/set` via HTTP POST will require either two POST fields:
+
+* `key` - required - The resource key
+* `value` - required - The resource data
+
+Additionally, to set a bin on an account, add a few more optional POST fields.
+
+* `account` - optional - Your APIBin user-name
+* `bin-key` - optional - Your APIBin API key
+* `private` - optional - Should the bin be private? Either `true` or `false`. Defaults to `true`.
 
 ## Get a resource
 
-    /get/resource-key
+    [/user-name]/get/resource-key
 
 ### Adding a callback function:
 
-    /get/resource-key?callback=whatever
+    [/user-name]/get/resource-key?callback=whatever
 
 ### Wrapping resource results in quotes:
 
-    /get/resource-key?qwrap=(double|single)
+    [/user-name]/get/resource-key?qwrap=(double|single)
 
 * Use `double` to wrap results in double quotes
 * Use `single` to wrap results in single quotes
 
 ### Defining a content type:
 
-    /get[/content-type]/resource-key
+    [/user-name]/get[/content-type]/resource-key
 
 To define a specific content type, one of the optional parameters (below) must be passed after `/get`. So a JSON get request would look like `/get/json/resource-key`
 
@@ -28,21 +51,6 @@ To define a specific content type, one of the optional parameters (below) must b
 * json returns application/json; charset=utf-8
 * xml returns text/xml; charset=utf-8
 
----
-
-## Set a resource
-
-    /set (HTTP GET/HTTP POST)
-
-Calling `/set` via HTTP GET will return the GUI for browser use.
-
-Calling `/set` via HTTP POST will require two POST fields:
-
-* `key` - The resource key
-* `value` - The resource data
-
 ## Edit a resource
 
-    /edit/resource-key
-
-This is GUI only at the moment.
+    [/user-name]/edit/resource-key
