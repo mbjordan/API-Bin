@@ -2,11 +2,11 @@
 
 > This is a draft of an idea, using [Readme Driven Development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html) 
 
-API Bin will be a RESTful web service built in a Key->Value model where the key is used to return the value (duh). The goal is to easily test API implementations without actually using the API that the implementation was implemented for (phew).
+API Bin is a RESTful web service built in a Key->Value model where the key is used to return the value (duh). The goal is to easily test API implementations without actually using the API that the implementation was implemented for (phew).
 
-The API will be public, with the option to create user accounts to store bins on. A bin related to a user account can be either private (anyone with link) or public.
+The API is public, with the option to create user accounts to store bins on. A bin related to a user-account can be either private (anyone with link) or public.
 
-Any type of data can be set, and public bins will automatically delete after 12 hours to keep key names clear.
+Any type of data can be set, and public bins (not associated with an account) will be automatically deleted after (6|12|24) hours to keep key names clear for reuse.
 
 ## Set a resource
 
@@ -61,7 +61,7 @@ To define a specific content type, one of the optional parameters (below) must b
 
 The back-end of API Bin will be built using Node.js, express.js & MongoDB; so it will be fast. The platform will either be Heroku or NodeJitsu, so it will be reliable.
 
-The entire application will be open-source to promote community.
+The entire application will be open-source to promote community development.
 
 ---
 
